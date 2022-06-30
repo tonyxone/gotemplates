@@ -1,0 +1,28 @@
+syntax = "proto3";
+option go_package = ".;grpc";
+
+message GetUserRequest {
+  int32 id = 1;
+}
+
+message GetUserResponse {
+  int32 id = 1;
+  string name = 2;
+  string gender = 3;
+}
+
+message CreateUserRequest {
+  int32 id = 1;
+  string name = 2;
+  string gender = 3;
+}
+
+message CreateUserResponse {
+  int32 id = 1;
+}
+
+service User{
+  rpc GetUserById(GetUserRequest) returns (GetUserResponse);
+  rpc CreateUser(CreateUserRequest) returns (CreateUserResponse);
+}
+
