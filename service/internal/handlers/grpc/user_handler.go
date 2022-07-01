@@ -1,6 +1,6 @@
 package grpc
 
-import "serviceA/api/grpc"
+import "gotemplates/api/grpc"
 
 type UserServer struct {
 	grpc.UnimplementedUserServer

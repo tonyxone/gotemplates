@@ -2,11 +2,11 @@ package main
 
 import (
 	"google.golang.org/grpc"
+	handler "gotemplates/service/internal/handlers/grpc"
 	"log"
 	"net"
-	handler "serviceA/service/internal/handlers/grpc"
 
-	proto "serviceA/api/grpc"
+	proto "gotemplates/api/grpc"
 )
 
 func main() {
